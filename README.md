@@ -1,1 +1,2 @@
-cloth_house cd path/to/your/project-fold
+Git ko initialize karein:
+git init
