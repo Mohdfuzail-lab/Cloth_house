@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Ansari Cloth House</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; }
+    .login-form { width: 300px; margin: 50px auto; padding: 30px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+    input { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ddd; }
+    button { background-color: #28a745; color: white; padding: 10px; border: none; width: 100%; cursor: pointer; }
+    button:hover { background-color: #218838; }
+  </style>
+</head>
+<body>
+
+<div class="login-form">
+  <h2>Login</h2>
+  <form>
+    <input type="text" placeholder="Username" id="username" required>
+    <input type="password" placeholder="Password" id="password" required>
+    <button type="submit" onclick="login()">Login</button>
+  </form>
+</div>
+
+<script>
+  function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Sample user data (For testing)
+    const admin = { username: "admin", password: "admin123" };
+    const user = { username: "user", password: "user123" };
+
+    // Check if admin or user
+    if (username === admin.username && password === admin.password) {
+      window.location.href = "admin-dashboard.html"; // Redirect to Admin Dashboard
+    } else if (username === user.username && password === user.password) {
+      window.location.href = "user-dashboard.html"; // Redirect to User Dashboard
+    } else {
+      alert("Invalid login credentials");
+    }
+  }
+</script>
+
+</body>
+</html>
